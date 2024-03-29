@@ -9,7 +9,7 @@ process.env.NODE_ENV = process.env.NODE_ENV || 'dev'
 //URL DB
 let urlDB;
 if(process.env.NODE_ENV === 'dev'){
-    urlDB = 'mongodb://localhost:27017/cuentas'
+    urlDB = 'mongodb+srv://ericmartingalan:Bizcocho16@cluster0.bqpvd9u.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'
 } else {
     urlDB = process.env.URL_PROD
 }
