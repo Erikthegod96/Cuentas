@@ -1,5 +1,5 @@
 require ("mongoose");
-
+require('dotenv').config();
 //PUERTO
 process.env.PORT = process.env.PORT || 3002;
 
@@ -9,9 +9,9 @@ process.env.NODE_ENV = process.env.NODE_ENV || 'dev'
 //URL DB
 let urlDB;
 if(process.env.NODE_ENV === 'dev'){
-    urlDB = 'mongodb+srv://ericmartingalan:Bizcocho16@cluster0.bqpvd9u.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'
+    urlDB = 'mongodb://localhost:27017/cuentas'
 } else {
-    urlDB = process.env.URL_PROD
+    urlDB = process.env.MONGODB_CNN
 }
 process.env.URLDB = urlDB;
 
